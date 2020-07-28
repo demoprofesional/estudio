@@ -28,13 +28,13 @@
         "isScrollToTopButton": true
       },
       "additionalSetColors": [
+        "#2d2321",
         "#7fb5c1",
         "#4b4040",
         "#ff33f2",
         "#34bebe",
         "#2e2e2e",
-        "#d0d7d9",
-        "#167878"
+        "#d0d7d9"
       ]
     },
     "path": "@PROJECT_PATH@",
@@ -51,8 +51,8 @@
         "url": "https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i"
       }
     ],
-    "uniqCompNum": 41,
-    "versionPublish": "4.12.3",
+    "uniqCompNum": 44,
+    "versionPublish": "4.12.4",
     "screenshot": "screenshot.png",
     "robotsText": "User-agent: *\r\nDisallow: /cgi-bin\r\n",
     "robotsSwitcher": false,
@@ -500,6 +500,145 @@
           "_protectedParams": [],
           "_global": true,
           "_once": "menu",
+          "_params": {}
+        },
+        {
+          "_name": "preloader1",
+          "_styles": {
+            "#loading-center": {
+              "width": "100%",
+              "height": "100vh",
+              "position": "relative",
+              "background-color": "@preBgcolor"
+            },
+            "#loading-center-absolute": {
+              "position": "absolute",
+              "left": "50%",
+              "top": "50%",
+              "height": "50px",
+              "width": "50px",
+              "margin-top": "-25px",
+              "margin-left": "-25px",
+              "-ms-transform": "rotate(45deg)",
+              "-webkit-transform": "rotate(45deg)",
+              "transform": "rotate(45deg)",
+              "-webkit-animation": "loading-center-absolute 1.5s infinite",
+              "animation": "loading-center-absolute 1.5s infinite"
+            },
+            ".object": {
+              "width": "25px",
+              "height": "25px",
+              "background-color": "@preLoadcolor",
+              "float": "left"
+            },
+            "#object_one": {
+              "-webkit-animation": "object_one 1.5s infinite",
+              "animation": "object_one 1.5s infinite"
+            },
+            "#object_two": {
+              "-webkit-animation": "object_two 1.5s infinite",
+              "animation": "object_two 1.5s infinite"
+            },
+            "#object_three": {
+              "-webkit-animation": "object_three 1.5s infinite",
+              "animation": "object_three 1.5s infinite"
+            },
+            "#object_four": {
+              "-webkit-animation": "object_four 1.5s infinite",
+              "animation": "object_four 1.5s infinite"
+            },
+            "@-webkit-keyframes loading-center-absolute": {
+              "100%": {
+                "-webkit-transform": "rotate(-45deg)"
+              }
+            },
+            "@keyframes loading-center-absolute": {
+              "100%": {
+                "transform": "rotate(-45deg)",
+                "-webkit-transform": "rotate(-45deg)"
+              }
+            },
+            "@-webkit-keyframes object_one": {
+              "25%": {
+                "-webkit-transform": "translate(0, -50px) rotate(-180deg)"
+              },
+              "100%": {
+                "-webkit-transform": "translate(0, 0) rotate(-180deg)"
+              }
+            },
+            "@keyframes object_one": {
+              "25%": {
+                "transform": "translate(0, -50px) rotate(-180deg)",
+                "-webkit-transform": "translate(0, -50px) rotate(-180deg)"
+              },
+              "100%": {
+                "transform": "translate(0, 0) rotate(-180deg)",
+                "-webkit-transform": "translate(0, 0) rotate(-180deg)"
+              }
+            },
+            "@-webkit-keyframes object_two": {
+              "25%": {
+                "-webkit-transform": "translate(50px, 0) rotate(-180deg)"
+              },
+              "100%": {
+                "-webkit-transform": "translate(0, 0) rotate(-180deg)"
+              }
+            },
+            "@keyframes object_two": {
+              "25%": {
+                "transform": "translate(50px, 0) rotate(-180deg)",
+                "-webkit-transform": "translate(50px, 0) rotate(-180deg)"
+              },
+              "100%": {
+                "transform": "translate(0, 0) rotate(-180deg)",
+                "-webkit-transform": "translate(0, 0) rotate(-180deg)"
+              }
+            },
+            "@-webkit-keyframes object_three": {
+              "25%": {
+                "-webkit-transform": "translate(-50px, 0) rotate(-180deg)"
+              },
+              "100%": {
+                "-webkit-transform": "translate(0, 0) rotate(-180deg)"
+              }
+            },
+            "@keyframes object_three": {
+              "25%": {
+                "transform": "translate(-50px, 0) rotate(-180deg)",
+                "-webkit-transform": "translate(-50px, 0) rotate(-180deg)"
+              },
+              "100%": {
+                "transform": "translate(0, 0) rotate(-180deg)",
+                "-webkit-transform": "rtranslate(0, 0) rotate(-180deg)"
+              }
+            },
+            "@-webkit-keyframes object_four": {
+              "25%": {
+                "-webkit-transform": "translate(0, 50px) rotate(-180deg)"
+              },
+              "100%": {
+                "-webkit-transform": "translate(0, 0) rotate(-180deg)"
+              }
+            },
+            "@keyframes object_four": {
+              "25%": {
+                "transform": "translate(0, 50px) rotate(-180deg)",
+                "-webkit-transform": "translate(0, 50px) rotate(-180deg)"
+              },
+              "100%": {
+                "transform": "translate(0, 0) rotate(-180deg)",
+                "-webkit-transform": "translate(0, 0) rotate(-180deg)"
+              }
+            }
+          },
+          "_customHTML": "<section class=\"mbr-section\" group=\"Dentaura Preloader\" plugins=\"Dentaurapreloader\" once=\"Dentaura Preloader\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"color\" title=\"Background Color\" name=\"preBgcolor\" value=\"#2d2321\">\n        <input type=\"color\" title=\"Preloader Color\" name=\"preLoadcolor\" value=\"#0f7699\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <!-- Dentaura Preloader --><div id=\"loading-preloader\">\n            <div id=\"loading-center\">\n                <div id=\"loading-center-absolute\">\n                    <div class=\"object\" id=\"object_one\"></div>\n                    <div class=\"object\" id=\"object_two\"></div>\n                    <div class=\"object\" id=\"object_three\"></div>\n                    <div class=\"object\" id=\"object_four\"></div>\n                </div>\n            </div>\n        </div><!--End of Dentaura Preloader -->\n    \n</section>",
+          "_anchor": "preloader1-17",
+          "_isUserblock": true,
+          "_sourceTheme": "dentauram4",
+          "_cid": "s64kKETfi3",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": "Dentaura Preloader",
           "_params": {}
         },
         {
@@ -1149,8 +1288,8 @@
           "_global": false,
           "_once": false,
           "_params": {
-            "slides__autoplay": true,
-            "slides__autoplayInterval": "3000",
+            "slides__autoplay": "hover",
+            "slides__autoplayInterval": "5000",
             "slides__showBullets": true,
             "slides": [
               {
@@ -1345,7 +1484,7 @@
             }
           },
           "_name": "counters1",
-          "_customHTML": "<section class=\"counters1 counters\" group=\"Counters\" plugins=\"ViewportChecker\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n\n        <input type=\"checkbox\" title=\"Show Block Title\" name=\"showTitles\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked>\n\n        <select title=\"Cards Count\" name=\"cardsAmount\">\n           <option value=\"1\">1</option>\n           <option value=\"2\">2</option>\n           <option value=\"3\">3</option>\n           <option value=\"4\" selected>4</option>\n        </select>\n        \n        <input type=\"checkbox\" title=\"Transparent BG\" name=\"transparentBg\">\n        <input type=\"color\" title=\"Card Bg\" name=\"cardBg\" value=\"#879a9f\" condition=\"!transparentBg\">\n        \n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#d0d7d9\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#b2ccd2\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.9\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <h2 class=\"mbr-section-title pb-3 align-center mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n            Counters\n        </h2>\n        <h3 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n            Mobirise is a beautiful site constructor\n        </h3>\n\n        <div class=\"container pt-4 mt-2\">\n            <div class=\"media-container-row\">\n                <div class=\"card p-3 align-center col-12 col-md-6\" mbr-class=\"{'col-lg-3': cardsAmount == '4','col-lg-4': cardsAmount == '3'}\">\n                    <div class=\"panel-item\" mbr-class=\"{'p-3':!transparentBg}\">\n                        <div class=\"card-img pb-3\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"mbr-iconfont material-cake material\" style=\"color: rgb(22, 120, 120); fill: rgb(22, 120, 120);\"></span>\n                        </div>\n\n                        <div class=\"card-text\">\n                            <h3 class=\"count pt-3 pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\">\n                                  15</h3>\n                            <h4 class=\"mbr-content-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitles\">\n                                Años en el mercado</h4>\n                            <p class=\"mbr-content-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-content-text\">\n                                Ya han transcurrido más de quince años desde la apertura del estudio. Ha sido un período de constante crecimiento junto con nuestros clientes.</p>\n                        </div>\n                    </div>\n                </div>\n\n\n                <div class=\"card p-3 align-center col-12 col-md-6\" mbr-if=\"cardsAmount>1\" mbr-class=\"{'col-lg-3': cardsAmount == '4','col-lg-4': cardsAmount == '3'}\">\n                    <div class=\"panel-item\" mbr-class=\"{'p-3':!transparentBg}\">\n                        <div class=\"card-img pb-3\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"mbr-iconfont ti-bar-chart\" style=\"color: rgb(22, 120, 120); fill: rgb(22, 120, 120);\"></span>\n                        </div>\n                        <div class=\"card-text\">\n                            <h3 class=\"count pt-3 pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\">85</h3>\n                            <h4 class=\"mbr-content-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitles\">\n                                Obras finalizadas</h4>\n                            <p class=\"mbr-content-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-content-text\">Presentamos con orgullo la experiencia adquirida por haber trabajado en cantidad de obras &nbsp;totalmente diferentes, en distintas provincias.</p>\n                        </div>\n                    </div>\n                </div>\n\n                <div class=\"card p-3 align-center col-12 col-md-6\" mbr-if=\"cardsAmount>2\" mbr-class=\"{'col-lg-3': cardsAmount == '4','col-lg-4': cardsAmount == '3'}\">\n                    <div class=\"panel-item\" mbr-class=\"{'p-3':!transparentBg}\">\n                        <div class=\"card-img pb-3\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"mbr-iconfont mbri-growing-chart\" style=\"color: rgb(22, 120, 120); fill: rgb(22, 120, 120);\"></span>\n                        </div>\n                        <div class=\"card-text\">\n                            <h3 class=\"count pt-3 pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\">\n                                  31500</h3>\n                            <h4 class=\"mbr-content-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitles\">\n                                m2 diseñados&nbsp;</h4>\n                            <p class=\"mbr-content-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-content-text\">Incluyendo los distintos proyectos de vivienda, oficinas, industrias y otros.<br><br><br><br></p>\n                        </div>\n                    </div>\n                </div>\n\n\n                <div class=\"card p-3 align-center col-12 col-md-6\" mbr-if=\"cardsAmount>3\" mbr-class=\"{'col-lg-3': cardsAmount == '4','col-lg-4': cardsAmount == '3'}\">\n                    <div class=\"panel-item\" mbr-class=\"{'p-3':!transparentBg}\">\n                        <div class=\"card-img pb-3\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"mbr-iconfont mbri-edit\" style=\"color: rgb(22, 120, 120); fill: rgb(22, 120, 120);\"></span>\n                        </div>\n\n                        <div class=\"card-texts\">\n                             <h3 class=\"count pt-3 pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\">172</h3>\n                            <h4 class=\"mbr-content-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitles\">\n                                Estudios de factibilidad</h4>\n                            <p class=\"mbr-content-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-content-text\">La cantidad importa, claro, pero la calidad (experiencia diversa), es mucho más importante y, lo ideal es que ambas coincidan a la vez.<br></p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n   </div>\n</section>",
+          "_customHTML": "<section class=\"counters1 counters\" group=\"Counters\" plugins=\"ViewportChecker\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n\n        <input type=\"checkbox\" title=\"Show Block Title\" name=\"showTitles\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked>\n\n        <select title=\"Cards Count\" name=\"cardsAmount\">\n           <option value=\"1\">1</option>\n           <option value=\"2\">2</option>\n           <option value=\"3\">3</option>\n           <option value=\"4\" selected>4</option>\n        </select>\n        \n        <input type=\"checkbox\" title=\"Transparent BG\" name=\"transparentBg\">\n        <input type=\"color\" title=\"Card Bg\" name=\"cardBg\" value=\"#879a9f\" condition=\"!transparentBg\">\n        \n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#d0d7d9\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#b2ccd2\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.9\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <h2 class=\"mbr-section-title pb-3 align-center mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n            Counters\n        </h2>\n        <h3 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n            Mobirise is a beautiful site constructor\n        </h3>\n\n        <div class=\"container pt-4 mt-2\">\n            <div class=\"media-container-row\">\n                <div class=\"card p-3 align-center col-12 col-md-6\" mbr-class=\"{'col-lg-3': cardsAmount == '4','col-lg-4': cardsAmount == '3'}\">\n                    <div class=\"panel-item\" mbr-class=\"{'p-3':!transparentBg}\">\n                        <div class=\"card-img pb-3\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"mbr-iconfont material-cake material\" style=\"color: rgb(22, 120, 120); fill: rgb(22, 120, 120);\"></span>\n                        </div>\n\n                        <div class=\"card-text\">\n                            <h3 class=\"count pt-3 pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\">\n                                  15</h3>\n                            <h4 class=\"mbr-content-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitles\">\n                                Años en el mercado</h4>\n                            <p class=\"mbr-content-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-content-text\">\n                                Ya han transcurrido más de quince años desde la apertura del estudio. Ha sido un período de constante crecimiento junto con nuestros clientes.</p>\n                        </div>\n                    </div>\n                </div>\n\n\n                <div class=\"card p-3 align-center col-12 col-md-6\" mbr-if=\"cardsAmount>1\" mbr-class=\"{'col-lg-3': cardsAmount == '4','col-lg-4': cardsAmount == '3'}\">\n                    <div class=\"panel-item\" mbr-class=\"{'p-3':!transparentBg}\">\n                        <div class=\"card-img pb-3\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"mbr-iconfont ti-bar-chart\" style=\"color: rgb(22, 120, 120); fill: rgb(22, 120, 120);\"></span>\n                        </div>\n                        <div class=\"card-text\">\n                            <h3 class=\"count pt-3 pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\">45</h3>\n                            <h4 class=\"mbr-content-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitles\">\n                                Obras finalizadas</h4>\n                            <p class=\"mbr-content-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-content-text\">Presentamos con orgullo la experiencia adquirida por haber trabajado en cantidad de obras &nbsp;totalmente diferentes, en distintas provincias.</p>\n                        </div>\n                    </div>\n                </div>\n\n                <div class=\"card p-3 align-center col-12 col-md-6\" mbr-if=\"cardsAmount>2\" mbr-class=\"{'col-lg-3': cardsAmount == '4','col-lg-4': cardsAmount == '3'}\">\n                    <div class=\"panel-item\" mbr-class=\"{'p-3':!transparentBg}\">\n                        <div class=\"card-img pb-3\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"mbr-iconfont mbri-growing-chart\" style=\"color: rgb(22, 120, 120); fill: rgb(22, 120, 120);\"></span>\n                        </div>\n                        <div class=\"card-text\">\n                            <h3 class=\"count pt-3 pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\">31500</h3>\n                            <h4 class=\"mbr-content-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitles\">\n                                m2 diseñados&nbsp;</h4>\n                            <p class=\"mbr-content-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-content-text\">Incluyendo los distintos proyectos de vivienda, oficinas, industrias y otros.<br><br><br><br></p>\n                        </div>\n                    </div>\n                </div>\n\n\n                <div class=\"card p-3 align-center col-12 col-md-6\" mbr-if=\"cardsAmount>3\" mbr-class=\"{'col-lg-3': cardsAmount == '4','col-lg-4': cardsAmount == '3'}\">\n                    <div class=\"panel-item\" mbr-class=\"{'p-3':!transparentBg}\">\n                        <div class=\"card-img pb-3\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"mbr-iconfont mbri-edit\" style=\"color: rgb(22, 120, 120); fill: rgb(22, 120, 120);\"></span>\n                        </div>\n\n                        <div class=\"card-texts\">\n                             <h3 class=\"count pt-3 pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\">122</h3>\n                            <h4 class=\"mbr-content-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitles\">\n                                Estudios de factibilidad</h4>\n                            <p class=\"mbr-content-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-content-text\">La cantidad importa, claro, pero la calidad (experiencia diversa), es mucho más importante y, lo ideal es que ambas coincidan a la vez.<br></p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n   </div>\n</section>",
           "_cid": "s1kaAnJRkx",
           "_anchor": "counters1-10",
           "_protectedParams": [],
@@ -1622,7 +1761,7 @@
       "settings": {
         "meta_descr": "Web Page Generator Description",
         "title": "Mensaje Equipo - Redes Sociales",
-        "order": 4
+        "order": 2
       },
       "components": [
         {
